@@ -1,0 +1,86 @@
+
+Filter Messages
+GET
+localhost:9090/AdminProduits
+11:21:06.915
+Request Headers:
+User-Agent:"PostmanRuntime/7.17.1"
+Accept:"*/*"
+Cache-Control:"no-cache"
+Postman-Token:"7220f683-17c5-4d0e-9a36-e46236b95d72"
+Host:"localhost:9090"
+Accept-Encoding:"gzip, deflate"
+Connection:"keep-alive"
+Response Headers:
+Content-Type:"application/json;charset=UTF-8"
+Transfer-Encoding:"chunked"
+Date:"Sat, 05 Oct 2019 09:21:07 GMT"
+Response Body:
+Product{id=2, nom=Aspirateur Robot, prix=500}:300
+Product{id=3, nom=Table de Ping Pong, prix=750}:350
+Product{id=1, nom=Ordinateur portable, prix=350}:230
+200
+182 ms
+GET
+http://localhost:9090/ProduitsTrie/
+11:21:07.115
+Request Headers:
+User-Agent:"PostmanRuntime/7.17.1"
+Accept:"*/*"
+Cache-Control:"no-cache"
+Postman-Token:"f51fd9de-c942-48d7-8f67-c4882ce85dd4"
+Host:"localhost:9090"
+Accept-Encoding:"gzip, deflate"
+Connection:"keep-alive"
+Response Headers:
+Content-Type:"application/json;charset=UTF-8"
+Transfer-Encoding:"chunked"
+Date:"Sat, 05 Oct 2019 09:21:07 GMT"
+Response Body:0:
+id:2
+nom:"Aspirateur Robot"
+prix:500
+prixAchat:200
+1:
+id:1
+nom:"Ordinateur portable"
+prix:350
+prixAchat:120
+2:
+id:3
+nom:"Table de Ping Pong"
+prix:750
+prixAchat:400
+200
+11 ms
+POST
+http://localhost:9090/Produits/
+11:21:07.161
+Request Headers:
+Content-Type:"application/json"
+User-Agent:"PostmanRuntime/7.17.1"
+Accept:"*/*"
+Cache-Control:"no-cache"
+Postman-Token:"50dcc3af-664f-4a64-80e4-88e0c32628f2"
+Host:"localhost:9090"
+Accept-Encoding:"gzip, deflate"
+Content-Length:114
+Connection:"keep-alive"
+Request Body:
+id:5
+nom:"Nouveau produit null"
+prix:0
+prixAchat:1200
+Response Headers:
+Content-Type:"application/json;charset=UTF-8"
+Transfer-Encoding:"chunked"
+Date:"Sat, 05 Oct 2019 09:21:07 GMT"
+Response Body:
+timestamp:1570267267140
+status:406
+error:"Not Acceptable"
+exception:"com.ecommerce.microcommerce.web.exceptions.ProduitGratuitException"
+message:"le prix de vente ne doit pas être null"
+path:"/Produits/"
+406
+16 ms
